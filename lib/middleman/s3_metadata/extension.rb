@@ -77,6 +77,7 @@ module Middleman
 
       def connection
         @connection ||= Fog::Storage.new(provider: 'AWS',
+                                         path_style: true,
                                          aws_access_key_id: options.aws_access_key_id,
                                          aws_secret_access_key: options.aws_secret_access_key,
                                          region: options.region)
